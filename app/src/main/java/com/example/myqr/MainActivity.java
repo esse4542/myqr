@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
         // setContentView(R.layout.activity_main);
         new IntentIntegrator(this).initiateScan(); // 객체를 통해 화면을 스캔 (qr 리더기 생성)
     }
+
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
